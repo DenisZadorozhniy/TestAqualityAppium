@@ -1,0 +1,20 @@
+package screens.formsMainScreen;
+
+import org.openqa.selenium.By;
+
+import aquality.appium.mobile.elements.interfaces.IButton;
+import screens.MainScreen;
+
+public class NewestTabForm extends MainScreen {
+
+    private final IButton newestBtn;
+
+    public NewestTabForm() {
+        newestBtn = getElementFactory().getButton(By.xpath("//android.widget.LinearLayout" +
+                "[@content-desc=\"Newest\"]/android.widget.TextView"), "Newest button");
+    }
+
+    public Boolean getNewestBtnBtnAttributeSelected(){
+        return Boolean.valueOf(newestBtn.getAttribute("selected"));
+    }
+}
