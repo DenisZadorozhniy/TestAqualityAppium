@@ -1,25 +1,23 @@
 package screens.formsMainScreen;
 
-import static aquality.appium.mobile.application.AqualityServices.getElementFactory;
 import static utils.SwipeUtils.makeSwipe;
 
 import org.openqa.selenium.By;
-
-import java.util.List;
-
 import aquality.appium.mobile.actions.SwipeDirection;
 import aquality.appium.mobile.elements.interfaces.ILabel;
 import aquality.appium.mobile.elements.interfaces.ITextBox;
+import aquality.appium.mobile.screens.Screen;
 
-public class ArticleForm {
+public class ArticleForm extends Screen {
     private final ITextBox titleArticle;
     private final ITextBox fundingPercentageArticle;
     private final ITextBox backersArticle;
     private final ITextBox daysToGoArticle;
 
     public ArticleForm(String position) {
-
+        super(By.id("com.kickstarter.kickstarter:id/discovery_swipe_refresh_layout"), "Article Form");
         String articlePosition = String.format("android.widget.RelativeLayout[%s]", position);
+
         ILabel baseLocator = getElementFactory().getLabel(By.xpath("/hierarchy/android.widget." +
                 "FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget." +
                 "LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/" +

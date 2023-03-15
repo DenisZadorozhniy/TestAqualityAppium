@@ -1,6 +1,7 @@
 package screens;
 
-import static utils.LoadFromProperties.getProperties;
+
+import static configuration.Configuration.getProperties;
 
 import org.openqa.selenium.By;
 import aquality.appium.mobile.screens.Screen;

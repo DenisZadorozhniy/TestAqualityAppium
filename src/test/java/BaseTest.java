@@ -1,10 +1,11 @@
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+
 import aquality.appium.mobile.application.AqualityServices;
 
 public class BaseTest {
 
-    @AfterAll
-    public static void afterAll(){
+    @AfterEach
+    public void afterEach(){
         AqualityServices.getApplication().getDriver().quit();
     }
 }

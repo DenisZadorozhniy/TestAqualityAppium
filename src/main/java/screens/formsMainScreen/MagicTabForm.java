@@ -1,16 +1,16 @@
 package screens.formsMainScreen;
 
-import static aquality.appium.mobile.application.AqualityServices.getElementFactory;
-
 import org.openqa.selenium.By;
 
 import aquality.appium.mobile.elements.interfaces.IButton;
+import aquality.appium.mobile.screens.Screen;
 
-public class MagicTabForm {
+public class MagicTabForm extends Screen {
 
     private final IButton magicBtn;
 
     public MagicTabForm() {
+        super(By.id("com.kickstarter.kickstarter:id/discovery_recycler_view"), "MagicTab Form");
         magicBtn = getElementFactory().getButton(By.xpath("//android.widget.LinearLayout" +
                 "[@content-desc=\"Magic\"]/android.widget.TextView"), "Magic button");
     }
